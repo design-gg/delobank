@@ -93,7 +93,7 @@
     <script>
         // Конфигурация баннеров
         const bannersConfig = [
-            {name: 'banner1', folder: 'banners/banner-1/', htmlFile: 'index.html', width: 300, height: 500 },
+            {name: 'banner1', folder: 'banners/banner-1/', htmlFile: 'index.html', width: 300, height: 500, text:"Всякая херня" },
             {name: 'banner2', folder: 'banners/banner-2/', htmlFile: 'index.html', width: 300, height: 500 }, 
             {name: 'banner3', folder: 'banners/banner-3/', htmlFile: 'index.html', width: 300, height: 500 }, 
 
@@ -112,6 +112,10 @@
                 
                 const bannerContainer = document.createElement('div');
                 bannerContainer.className = 'banner-container';
+
+                const bannerText = document.createElement('div');
+                bannerText.className = 'banner-item-text';
+                bannerText.textContent = banner.text;
                 
                 // Создаем iframe для баннера
                 const iframe = document.createElement('iframe');
@@ -125,6 +129,7 @@
                 
                 // Добавляем элементы в DOM
                 bannerContainer.appendChild(iframe);
+                bannerContainer.appendChild(bannerText);
                 bannerItem.appendChild(bannerContainer);
                 grid.appendChild(bannerItem);
             });
