@@ -24,7 +24,7 @@
         
         .banners-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, 240px);
+            grid-template-columns: repeat(auto-fit, 300px);
             gap: 20px;
             padding: 0;
             align-items: center;
@@ -38,7 +38,7 @@
             border:1px solid #999;
             overflow: hidden;
             transition: transform 0.2s ease;
-            height: 400px; /* Стандартная высота баннера */
+            height: 500px; /* Стандартная высота баннера */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -47,8 +47,8 @@
 
         
         .banner-container {
-            width: 240px;
-            height: 400px;
+            width: 300px;
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -56,23 +56,23 @@
         }
         
         .banner-container canvas {
-            max-width: 240px;
-            max-height: 400px;
+            max-width: 300px;
+            max-height: 500px;
 
         }
         
-        @media (max-width: 240px) {
+        @media (max-width: 300px) {
             .banners-grid {
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 gap: 15px;
             }
             
             .banner-item {
-                height: 400px;
+                height: 500px;
             }
         }
         
-        @media (max-width: 240px) {
+        @media (max-width: 300px) {
             .banners-grid {
                 grid-template-columns: 1fr;
             }
@@ -93,9 +93,9 @@
     <script>
         // Конфигурация баннеров
         const bannersConfig = [
-            {name: 'banner1', folder: 'banners/banner2/', htmlFile: 'index.html', width: 240, height: 400 },
-            {name: 'banner2', folder: 'banners/banner3/', htmlFile: 'index.html', width: 240, height: 400 }, 
-            {name: 'banner3', folder: 'banners/banner9/', htmlFile: 'index.html', width: 240, height: 400 }, 
+            {name: 'banner1', folder: 'banners/banner-1/', htmlFile: 'index.html', width: 300, height: 500 },
+            {name: 'banner2', folder: 'banners/banner-2/', htmlFile: 'index.html', width: 300, height: 500 }, 
+            {name: 'banner3', folder: 'banners/banner-3/', htmlFile: 'index.html', width: 300, height: 500 }, 
 
             
             // Добавляйте новые баннеры здесь по мере их создания
